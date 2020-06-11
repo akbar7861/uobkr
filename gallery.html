@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- CSRF Token -->
+        <meta name="csrf-token" content="QPSB0SCWqWBYY18ACUZZ82HuaSejCWgNgdetgdOP">
+
+        <title>UOBKR - University of Bedfordshire Korean Republic</title>
+
+        <!-- Styles -->
+        <link href="css/app.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="app">
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="navbar-blur"></div>
+
+    <a class="navbar-brand" href="#">
+        <img src="img/logo2.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        UOBKR
+    </a>
+    <button id="navbar-toggle-button" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Left Side Of Navbar -->
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item dropdown">
+                <a href="about.html" class="nav-link" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+                <div class="dropdown-menu" role="menu">
+                    <a class="dropdown-item" href="about.html">About UOBKR</a>
+                    <a class="dropdown-item" href="constitution.html">Constitution</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="board/notice.html" class="nav-link" role="button" aria-haspopup="true" aria-expanded="false">News & Events</a>
+                <div class="dropdown-menu" role="menu">
+                    <a class="dropdown-item" href="board/notice.html">Notice Board</a>
+                    <a class="dropdown-item" href="events.html">Events</a>
+                    <a class="dropdown-item" href="gallery.html">Photo Gallery</a>
+                </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="board/qna.html">Q&A</a></li>
+            <li class="nav-item dropdown">
+                <a href="login.html" class="nav-link" role="button" aria-haspopup="true" aria-expanded="false">Forum</a>
+                <div class="dropdown-menu" role="menu">
+                    <a class="dropdown-item" href="login.html">General Discussion</a>
+                    <a class="dropdown-item" href="login.html">Alumni</a>
+                    <a class="dropdown-item" href="login.html">Committee</a>
+                </div>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav ml-auto">
+            <!-- Authentication Links -->
+                            <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+                    </ul>
+    </div>
+</nav>                        <div id="parallax-banner" class="pb-5" style="display: none;">
+                <div class="container mt-3 mb-3">
+                    	<h1 class="banner-title">Coming Soon</h1>
+    <h5 class="banner-description">This page is currently under development. Thank you for your patience.</h5>
+                </div>
+            </div>
+            <div id="main-content" class="container">
+                                	<img class="img-fluid" src="img/unavailable.jpg">
+            </div>
+            <hr class="mt-3 ml-5 mr-5">
+        </div>
+        <footer class="page-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-12">
+				<h5>University of Bedfordshire Korean Republic</h5>
+				<p>UOBKR is an official society of the University of Bedfordshire Union (UOBU).</p>
+				<p>Please read our <a href="terms.html">Terms and Conditions</a> and <a href="terms.html#privacy">Privacy Policy</a></p>
+			</div>
+			<div class="col-md-6 col-sm-12">
+				<h5>Connect with UOBKR</h5>
+				<a class="text-primary" href="https://www.facebook.com/unibeds/" target="_blank"><i class="fa fa-facebook-official" style="font-size: 75px; margin-right:20px;"></i></a>
+				<a class="text-warning" href="https://www.instagram.com/uniofbeds/" target="_blank"><i class="fa fa-instagram" style="font-size: 75px; margin-right:20px;"></i></a>
+				<a class="text-info" href="mailto:international@beds.ac.uk"><i class="fa fa-envelope" style="font-size: 70px;"></i></a>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright bg-dark">
+		<div class="container">
+			<span class="text-light float-left">
+				UOBKR 2020
+			</span>
+			<span class="text-light float-right">
+				Created by <a href="mailto:akbarn777@gmail.com">Akbar Ahmed</a>
+			</span>
+		</div>
+	</div>
+</footer>
+        <!-- Scripts -->
+        <script src="js/app.js"></script>
+        <script src="js/parallax.min.js"></script>
+        <script>
+            $(function () {
+                $('#navbar-toggle-button').click(function(){
+                    var $nav = $("nav");
+                    if(!$nav.hasClass('scrolled') && !$('#navbarSupportedContent').hasClass('show')){
+                        $nav.toggleClass('scrolled');
+                    }else if($nav.hasClass('scrolled') && $('#navbarSupportedContent').hasClass('show') && $(window).scrollTop() <= 310){
+                        $nav.toggleClass('scrolled');
+                    }
+                });
+
+                $(window).scroll(function () {
+                    var $nav = $("nav");
+                    if(!$nav.hasClass('fix-scroll')){
+                        $nav.toggleClass('scrolled', $(this).scrollTop() > 310);
+                    }
+                });
+            });
+        </script>
+        <script>
+	$(function() {
+		$('#parallax-banner').show();
+		$('#parallax-banner').parallax({imageSrc: 'img/stem-box-wide2.jpg'});
+	});
+</script>
+    </body>
+
+</html>
